@@ -1,34 +1,54 @@
-const RockPaperScissors = () => {
-    let pScore = 0;
-    let cScore = 0;
+var you;
+var yourScore = 0;
+var computer;
+var computerScore
 
-    const startGame = () => {
-        const playBtn = document.querySelector('.intro button');
-        const introScreen = document.querySelector('.intro');
-        const match = document.querySelector('.match');
-        
-        playBtn.addEventListener('click', () => {
-            introScreen.classList.add('fadeOut');
-            match.classList.add('fadeIn');
-        });
-    };
-    //play
-    const play = () => {
-        const options = document.querySelectorAll('.options button');
-        const player = document.querySelector(".player-choice");
-        const computer = document. querySelector(".computer-choice");
+var choices = ["rock", "paper", "scissors"];
 
-        const computerOptions = ['rock', 'paper', 'scissors'];
-        const computerNumber = Math.floor(Math.random() * 3);
-        
-        computerOptions[computerNumber]
-    };
+window.onload = function () {
+    for (let i = 0; i < 3; i++) {
+        let choice = document.createElement("img");
+        choice.id = choices[i];
+        choice.src = choices[i] + ".png";
+        choice.addEventListener("click", selectChoice);
+        document.getElementById("choices").append(choice);
+    }
+}
 
+function selectChoice() {
+    you = this.id;
+    document.getElementById("your-choice").src = you + ".png";
 
+    computer = choices[Math.floor(Math.random() * 3)];
+    document.getElementById("computer-choice").src = computer + ".png"
 
+    if (you == computer) {
+        yourScore += 1;
+        computerScore += 1;
+    } else {
+        if (you == "rock") {
+            if (computer == "scissors") {
+                yourScore += 1;
+            } else if (computer == "paper") {
+                computerScore += 1;
+            }
+        }
+        else if (you == "scissors") {
+            if (computer == "paper") {
+                yourScore += 1;
+            } else if (computer == "rock") {
+                computerScore += 1;
+            }
+        }
+        else if (you == "paper") {
+            if (computer == "rock") {
+                yourScore += 1;
+            } else if (computer == "scissors") {
+                computerScore += 1;
+            }
+        }
+    }
 
-    startGame();
-};
-
-//start
-RockPaperScissors();
+    document.getElementsByClassName("player-score").innerText = yourScore
+    document.getElementsByClassName("computer-score").innerText = computerScore
+}

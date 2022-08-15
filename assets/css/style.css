@@ -1,3 +1,7 @@
+body {
+    text-align: center;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -28,62 +32,29 @@ section {
     font-size: 25px;
 }
 
-.intro {
-    color: aliceblue;
-    height: 50vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
- }
-
-.intro h1 {
-    font-size: 50px;
+#computer-choice {
+    width: 240px;
+    height: 240px;
+    background-color: cyan;
+    margin-top: 10px;
 }
 
-.intro button,
-.match button {
-    width: 150px;
-    height: 50px;
-    background: none;
-    border: none;
-    color: aliceblue;
-    font-size: 20px;
-    background: rgb(30, 100, 89);
-    border-radius: 3px;
-    cursor: pointer;
+#player-choice {
+    width: 240px;
+    height: 240px;
+    background-color: yellow;
+    margin-top: 10px;
 }
 
-.match {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+#choices {
+    width: 240px;
+    height: 80px;
+    background-color: green;
+    margin: 0 auto;
+    margin-top: 10px;
 }
 
-.winner {
-    color: aliceblue;
-    text-align: center;
-    font-size: 50px;
-}
-
-.hands, .options {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
-
-
-.player {
-    transform: rotateY(180deg);
-}
-
-div.fadeOut {
-    opacity: 0;
-    pointer-events: none;
-}
-
-div.fadeIn {
-    opacity: 1;
-    pointer-events: all;
+#choices img {
+    width: 80px;
+    height: 80px;
 }
