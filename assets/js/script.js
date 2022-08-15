@@ -1,7 +1,7 @@
 var you;
 var yourScore = 0;
 var computer;
-var computerScore
+var computerScore = 0;
 
 var choices = ["rock", "paper", "scissors"];
 
@@ -49,6 +49,6 @@ function selectChoice() {
         }
     }
 
-    document.getElementsByClassName("player-score").innerText = yourScore
-    document.getElementsByClassName("computer-score").innerText = computerScore
+    document.getElementById("player-score").innerText = yourScore
+    document.getElementById("computer-score").innerText = computerScore
 }
