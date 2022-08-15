@@ -1,35 +1,6 @@
 body {
-    text-align: center;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-section {
-    height: 100vh;
-    background-color: rgb(21, 34, 78);
     font-family: sans-serif;
-}
-
-.score {
-    color: aliceblue;
-    height: 20vh;
-    display:flex;
-    justify-content: space-around;
-    align-items: center;
-}
-
-.score h2 {
-    font-size: 30px;
-}
-
-.score p {
     text-align: center;
-    padding: 10px;
-    font-size: 25px;
 }
 
 #computer-choice {
