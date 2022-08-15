@@ -17,7 +17,7 @@ window.onload = function () {
 
 function selectChoice() {
     you = this.id;
-    document.getElementById("your-choice").src = you + ".png";
+    document.getElementById("player-choice").src = you + ".png";
 
     computer = choices[Math.floor(Math.random() * 3)];
     document.getElementById("computer-choice").src = computer + ".png"
