@@ -52,3 +52,7 @@ function selectChoice() {
     document.getElementById("player-score").innerText = yourScore
     document.getElementById("computer-score").innerText = computerScore
 }
+
+
+
+
